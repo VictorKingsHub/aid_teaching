@@ -27,25 +27,25 @@ const Jss1Page: React.FC<Jss1PageProps> = () => {
   ].sort();
 
   const subjectColors = [
-        'bg-blue-500 text-white',       
-        'bg-green-500 text-white',      
-        'bg-yellow-600 text-white',    
-        'bg-red-500 text-white',       
-        'bg-purple-500 text-white',    
-        'bg-pink-500 text-white',      
-        'bg-gray-600 text-white',      
-        'bg-teal-500 text-white',
-        'bg-orange-500 text-white',
-        'bg-indigo-500 text-white',
-        'bg-blue-600 text-white',
-        'bg-green-600 text-white',
-        'bg-yellow-700 text-white',
-        'bg-red-600 text-white',
-        'bg-purple-600 text-white',
-        'bg-pink-600 text-white',
-        'bg-gray-700 text-white',
-        'bg-teal-600 text-white',
-        'bg-orange-600 text-white',
+        'bg-indigo-300 text-indigo-900',  // Indigo
+        'bg-teal-300 text-teal-900',    // Teal
+        'bg-yellow-400 text-yellow-900',  // Yellow
+        'bg-red-300 text-red-900',      // Red
+        'bg-purple-300 text-purple-900', // Purple
+        'bg-pink-300 text-pink-900',    // Pink
+        'bg-gray-400 text-gray-900',    // Gray
+        'bg-green-300 text-green-900',
+        'bg-orange-300 text-orange-900',
+        'bg-blue-300 text-blue-900',
+        'bg-indigo-400 text-indigo-900',
+        'bg-teal-400 text-teal-900',
+        'bg-yellow-500 text-yellow-900',
+        'bg-red-400 text-red-900',
+        'bg-purple-400 text-purple-900',
+        'bg-pink-400 text-pink-900',
+        'bg-gray-500 text-gray-900',
+        'bg-green-400 text-green-900',
+        'bg-orange-400 text-orange-900',
   ];
 
   return (
@@ -96,6 +96,19 @@ const Jss1Page: React.FC<Jss1PageProps> = () => {
       <div className="mt-12">
          <h2 className="text-2xl font-semibold text-gray-900 mb-4">About JSS1</h2>
           <p className="text-gray-700 max-w-2xl mx-auto">Junior Secondary School 1 (JSS1) is the first year of junior secondary education.  Here is a brief overview of what you will learn.</p>
+      </div>
+
+      {/* Previous and Next buttons */}
+      <div className="flex justify-around mt-8">
+        <button
+          disabled
+          className="px-6 py-3 rounded-lg bg-gray-400 text-white cursor-not-allowed"
+        >
+          Previous
+        </button>
+        <Link href="/classes/jss2" className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+          Next
+        </Link>
       </div>
     </div>
   );
